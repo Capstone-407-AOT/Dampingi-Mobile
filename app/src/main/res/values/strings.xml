@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Dampingi</string>
+    <string name="versi">version 1.1</string>
+    <string name="tagline">Hidupmu, untukmu</string>
+    <string name="masuk">Masuk</string>
+    <string name="profil">Profil</string>
+    <string name="setting">Setting</string>
+    <string name="pelaporan">Pelaporan</string>
+    <string name="forum">Forum</string>
+    <string name="pendampingan">Pendampingan</string>
+    <string name="peta">Peta Peringatan</string>
+    <string name="darurat">Darurat</string>
+    <string name="panik">Tekan tombol ini untuk memanggil bantuan darurat</string>
+    <string name="atau">Atau jika anda belum mendaftar</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="email">E-mail</string>
+    <string name="signUp">Sign Up</string>
 </resources>
