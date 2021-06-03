@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package com.bangkit.aot.dampingi.ui.login
 
 import android.content.Intent
@@ -13,6 +11,7 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        @Suppress("DEPRECATION")
         Handler().postDelayed({
 
             startActivity(Intent(this, Login::class.java))

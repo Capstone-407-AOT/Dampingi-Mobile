@@ -10,7 +10,6 @@ import com.bangkit.aot.dampingi.ui.fitur.darurat.Darurat
 import com.bangkit.aot.dampingi.ui.fitur.forum.Forum
 import com.bangkit.aot.dampingi.ui.fitur.pelaporan.Pelaporan
 import com.bangkit.aot.dampingi.ui.fitur.pendampingan.Pendampingan
-import com.bangkit.aot.dampingi.ui.fitur.peta.Peta
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         val pelaporan: LinearLayout = findViewById(R.id.pelaporan)
         val forum: LinearLayout = findViewById(R.id.forum)
         val pendampingan: LinearLayout = findViewById(R.id.pendampingan)
-        val peta: LinearLayout = findViewById(R.id.peta)
         val darurat: ImageView = findViewById(R.id.btn_panic)
         val profil: ImageView = findViewById(R.id.profil)
         val setting: ImageView = findViewById(R.id.setting)
@@ -39,11 +37,6 @@ class MainActivity : AppCompatActivity() {
 
         pendampingan.setOnClickListener {
             val intent = Intent(this, Pendampingan::class.java)
-            startActivity(intent)
-        }
-
-        peta.setOnClickListener {
-            val intent = Intent(this, Peta::class.java)
             startActivity(intent)
         }
 
