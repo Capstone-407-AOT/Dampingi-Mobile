@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
 import com.bangkit.aot.dampingi.R
+import com.bangkit.aot.dampingi.ui.fitur.darurat.Darurat
 import com.bangkit.aot.dampingi.ui.fitur.forum.Forum
 import com.bangkit.aot.dampingi.ui.fitur.pelaporan.Pelaporan
 import com.bangkit.aot.dampingi.ui.fitur.pendampingan.Pendampingan
@@ -19,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         val pendampingan: LinearLayout? = findViewById(R.id.pendampingan)
         val forum: LinearLayout? = findViewById(R.id.forum)
         val profil: LinearLayout? = findViewById(R.id.profil)
-        val settings: ImageView = findViewById(R.id.settings)
+        val darurat: LinearLayout? = findViewById(R.id.darurat)
+        val settings: ImageView? = findViewById(R.id.settings)
 
 
         pelaporan!!.setOnClickListener {
@@ -41,6 +43,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Profil::class.java)
             startActivity(intent)
         }
+
+        darurat!!.setOnClickListener{
+            val intent = Intent(this, Darurat::class.java)
+            startActivity(intent)
+        }
+
 
         settings!!.setOnClickListener {
             val intent = Intent(this, Setting::class.java)

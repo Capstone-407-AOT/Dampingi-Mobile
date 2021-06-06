@@ -54,7 +54,9 @@
             android:ems="10"
             android:hint="@string/email"
             android:textColor="@color/black"
-            android:textColorHint="@color/black" />
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/black"
+            android:textColorLink="@color/black" />
 
         <EditText
             android:id="@+id/password"
@@ -68,7 +70,9 @@
             android:ems="10"
             android:hint="@string/password"
             android:textColor="@color/black"
-            android:textColorHint="@color/black" />
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/black"
+            android:textColorLink="@color/black" />
 
         <TextView
             android:id="@+id/textView7"
