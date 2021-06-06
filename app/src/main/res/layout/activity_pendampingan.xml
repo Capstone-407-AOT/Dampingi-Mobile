@@ -4,9 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F1D58E"
+    android:background="@color/grey"
     tools:context=".ui.fitur.pendampingan.Pendampingan">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@color/purple_500"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar2"
+            app:srcCompat="@drawable/abc_vector_test" />
+
+        <TextView
+            android:id="@+id/tipendampingan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="@string/pendampingan"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,46 +77,12 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView12" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/btn_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:background="@color/purple_500"
-            app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/toolbar2"
-            app:srcCompat="@drawable/abc_vector_test" />
-
-        <TextView
-            android:id="@+id/tipendampingan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/pendampingan"
-            android:textColor="@color/white"
-            android:textSize="18dp" />
-
-
-    </androidx.appcompat.widget.Toolbar>
-
     <LinearLayout
         android:id="@+id/ll_layout_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#E4E4E4"
+        android:background="@color/purple_200"
         android:orientation="horizontal">
 
         <EditText
@@ -95,16 +98,14 @@
             android:padding="10dp"
             android:singleLine="true" />
 
-        <Button
-            android:id="@+id/btn_send"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/round_button"
-            android:backgroundTint="#26A69A"
-            android:text="Send"
-            android:textColor="@android:color/white" />
+        <ImageView
+            android:id="@+id/btn_send3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            app:srcCompat="@drawable/send_icon" />
 
     </LinearLayout>
 
