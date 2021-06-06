@@ -37,39 +37,5 @@ class Forum : AppCompatActivity() {
 
         }
 
-
-
-        val forumList = listOf<DataForum>(
-            DataForum(
-                "Kesehatan Mental"
-            ),
-            DataForum(
-                "Kesehatan Mental"
-            ),
-            DataForum(
-                "Kesehatan Mental"
-            ),
-        )
-
-        val subyekList = listOf<DataSubyek>(
-            DataSubyek(
-                R.drawable.send_icon,
-                "Menghadapi Trauma",
-                "User143",
-                "Saya juga pernah tidak pernah..",
-            ),
-            DataSubyek(
-                R.drawable.send_icon,
-                "Menghadapi Trauma",
-                "User123",
-                "Saya juga pernah tidak pernah..",
-            ),
-            DataSubyek(
-                R.drawable.send_icon,
-                "Menghadapi Trauma",
-                "User153",
-                "Saya juga pernah tidak pernah..",
-            ),
-        )
     }
 }

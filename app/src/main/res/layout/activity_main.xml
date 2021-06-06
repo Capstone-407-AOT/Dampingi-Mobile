@@ -1,265 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
+    xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    tools:context=".ui.main.MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_bg"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/white_bg"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_name">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingLeft="15dp"
+                android:textColorHint="@color/black"
+                android:textSize="14sp"
+                tools:ignore="Suspicious0dp" />
 
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/dampingi2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@id/appbar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:text="@string/app_name"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView3"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/setting"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:src="@drawable/ic_setting" />
-
-                <ImageView
-                    android:id="@+id/profil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/setting"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:src="@drawable/ic_profil" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/white_bg"
+                android:src="@drawable/ic_search" />
 
 
+        </LinearLayout>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-        </androidx.appcompat.widget.Toolbar>
-
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_main">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".ui.main.MainActivity">
+            android:layout_height="wrap_content">
 
             <LinearLayout
-                android:id="@+id/pelaporan"
-                android:layout_width="125dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="70dp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="56dp"
-                android:background="@color/purple_500"
+                android:id="@+id/report"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white_bg"
+                android:gravity="center"
                 android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toStartOf="@+id/pendampingan"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/pelaporanIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/ic_alert" />
+                    android:id="@+id/reportIcon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/report" />
 
                 <TextView
-                    android:id="@+id/textPelaporan"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtReport"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:gravity="center"
                     android:text="@string/pelaporan"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/forum"
-                android:layout_width="130dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="56dp"
-                android:layout_marginEnd="70dp"
-                android:layout_marginRight="70dp"
-                android:background="@color/purple_500"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:id="@+id/forumIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/ic_forum" />
-
-                <TextView
-                    android:id="@+id/textForum"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/forum"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/pendampingan"
-                android:layout_width="130dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="70dp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="25dp"
-                android:background="@color/purple_500"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white_bg"
+                android:gravity="center"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pelaporan">
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/report"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/ic_pendampingan" />
+                    android:id="@+id/pendampingantIcon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/pendampingan" />
 
                 <TextView
-                    android:id="@+id/textPendampingan"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtPendampingan"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="@string/pendampingan"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/peta"
-                android:layout_width="130dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="70dp"
-                android:layout_marginRight="70dp"
-                android:background="@color/purple_500"
+                android:id="@+id/forum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white_bg"
+                android:gravity="center"
                 android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/forum">
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toStartOf="@+id/profil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/report">
 
                 <ImageView
-                    android:id="@+id/petaIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/ic_peta" />
+                    android:id="@+id/forumtIcon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/forum" />
 
                 <TextView
-                    android:id="@+id/textPeta"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtForum"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/peta"
-                    android:textColor="#FFFFFF" />
+                    android:gravity="center"
+                    android:text="@string/forum"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:id="@+id/panic_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="70dp"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="400dp"
-            android:layout_marginEnd="70dp"
-            android:layout_marginRight="70dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/purple_500"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/btn_panic"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/sos"
-                app:civ_circle_background_color="@color/white"/>
-
-            <TextView
-                android:id="@+id/textPanic"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/profil"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="48dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="48dp"
-                android:layout_marginRight="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white_bg"
                 android:gravity="center"
-                android:text="@string/panik"
-                android:textColor="@color/white"
-                android:textStyle="italic" />
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/forum"
+                app:layout_constraintTop_toBottomOf="@+id/pendampingan">
 
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/profilIcon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/profil" />
+
+                <TextView
+                    android:id="@+id/txtProfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/profil"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

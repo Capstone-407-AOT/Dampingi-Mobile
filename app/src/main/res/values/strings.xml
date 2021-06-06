@@ -3,11 +3,12 @@
     <string name="versi">version beta</string>
     <string name="tagline">Hidupmu, untukmu</string>
     <string name="masuk">Masuk</string>
+    <string name="search">Search</string>
     <string name="profil">Profil</string>
     <string name="setting">Setting</string>
     <string name="pelaporan">Pelaporan</string>
     <string name="forum">Forum</string>
-    <string name="pendampingan">Pendampingan</string>
+    <string name="pendampingan">konseling</string>
     <string name="peta">Peta Peringatan</string>
     <string name="darurat">Darurat</string>
     <string name="panik">Tekan tombol ini untuk memanggil bantuan darurat</string>
