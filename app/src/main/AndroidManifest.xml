@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/dampingi_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dampingi">
-        <activity android:name=".ui.login.SignUp"/>
+        <activity android:name=".ui.fitur.forum.ChatForum"></activity>
+        <activity android:name=".ui.login.SignUp" />
         <activity android:name=".ui.login.SignIn" />
         <activity android:name=".ui.fitur.darurat.Darurat" />
         <activity android:name=".ui.fitur.pendampingan.Pendampingan" />

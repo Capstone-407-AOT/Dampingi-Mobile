@@ -8,6 +8,7 @@ import android.widget.Button
 import com.bangkit.aot.dampingi.R
 import com.bangkit.aot.dampingi.databinding.ActivitySignUpBinding
 
+
 class SignUp : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignUpBinding
@@ -17,9 +18,9 @@ class SignUp : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val signUp: Button = findViewById(R.id.btn_signUp)
+        val signUp: Button? = findViewById(R.id.btn_signUp)
 
-        signUp.setOnClickListener {
+        signUp!!.setOnClickListener {
             signUpUser()
         }
     }

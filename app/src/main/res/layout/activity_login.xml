@@ -7,7 +7,7 @@
     tools:context=".ui.login.Login">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logoSignUp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="36dp"
@@ -26,9 +26,9 @@
         android:text="@string/app_name"
         android:textColor="@color/purple_700"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/logoSignUp"
+        app:layout_constraintStart_toEndOf="@+id/logoSignUp"
+        app:layout_constraintTop_toTopOf="@+id/logoSignUp"
         app:layout_constraintVertical_bias="0.288" />
 
     <TextView
@@ -54,7 +54,7 @@
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/logoSignUp"
         android:text="@string/masuk" />
 
     <Button

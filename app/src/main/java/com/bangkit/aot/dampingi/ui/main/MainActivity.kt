@@ -16,41 +16,41 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val pelaporan: LinearLayout = findViewById(R.id.pelaporan)
-        val forum: LinearLayout = findViewById(R.id.forum)
-        val pendampingan: LinearLayout = findViewById(R.id.pendampingan)
-        val darurat: ImageView = findViewById(R.id.btn_panic)
-        val profil: ImageView = findViewById(R.id.profil)
-        val setting: ImageView = findViewById(R.id.setting)
+        val pelaporan: LinearLayout? = findViewById(R.id.pelaporan)
+        val forum: LinearLayout? = findViewById(R.id.forum)
+        val pendampingan: LinearLayout? = findViewById(R.id.pendampingan)
+        val darurat: ImageView? = findViewById(R.id.btn_panic)
+        val profil: ImageView? = findViewById(R.id.profil)
+        val setting: ImageView? = findViewById(R.id.setting)
 
 
 
-        pelaporan.setOnClickListener {
+        pelaporan!!.setOnClickListener {
             val intent = Intent(this, Pelaporan::class.java)
             startActivity(intent)
         }
 
-        forum.setOnClickListener {
+        forum!!.setOnClickListener {
             val intent = Intent(this, Forum::class.java)
             startActivity(intent)
         }
 
-        pendampingan.setOnClickListener {
+        pendampingan!!.setOnClickListener {
             val intent = Intent(this, Pendampingan::class.java)
             startActivity(intent)
         }
 
-        darurat.setOnClickListener {
+        darurat!!.setOnClickListener {
             val intent = Intent(this, Darurat::class.java)
             startActivity(intent)
         }
 
-        profil.setOnClickListener{
+        profil!!.setOnClickListener{
             val intent = Intent(this, Profil::class.java)
             startActivity(intent)
         }
 
-        setting.setOnClickListener {
+        setting!!.setOnClickListener {
             val intent = Intent(this, Setting::class.java)
             startActivity(intent)
         }

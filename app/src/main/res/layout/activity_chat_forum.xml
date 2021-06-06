@@ -3,18 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#F1D58E"
-    tools:context=".ui.fitur.pelaporan.Pelaporan">
+    tools:context=".ui.fitur.forum.ChatForum">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar3"
+        android:id="@+id/toolbar5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -30,18 +31,24 @@
             app:layout_constraintTop_toTopOf="@+id/toolbar2"
             app:srcCompat="@drawable/abc_vector_test" />
 
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/send_icon"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="13dp" />
+
         <TextView
-            android:id="@+id/tilePelaporan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:text="@string/pelaporan"
+            android:text="@string/titleSubyek"
             android:textColor="@color/white"
-            android:textSize="24dp" />
-
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="18dp" />
 
     </androidx.appcompat.widget.Toolbar>
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -49,36 +56,6 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar3"
         tools:context=".ui.fitur.pendampingan.Pendampingan">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageView12"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="72dp"
-                android:foregroundGravity="center"
-                android:src="@drawable/bot_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:text="@string/robo"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@+id/imageView12"
-                app:layout_constraintHorizontal_bias="0.508"
-                app:layout_constraintStart_toStartOf="@+id/imageView12"
-                app:layout_constraintTop_toBottomOf="@+id/imageView12" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
             android:id="@+id/ll_layout_bar"

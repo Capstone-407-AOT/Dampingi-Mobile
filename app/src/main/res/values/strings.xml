@@ -20,8 +20,17 @@
     <string name="name">Username</string>
     <string name="forget">Lupa password?</string>
     <string name="password">Password</string>
+    <string name="call">Memanggil</string>
+    <string name="sapa">SAPA 123</string>
+    <string name="ket_call">Anda akan segera dihubungkan
+dengan Call Center SAPA 321</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="titleSubyek">Menghadapi Trauma</string>
+    <string name="user">User123</string>
+    <string name="chatUser">Saya juga pernah seperti itu...</string>
+    <string name="titik2">: </string>
+    <string name="robo">Anda terhubung dengan agen bot Dampingi. Semua percakapan tersimpan dengan aman, tidak ada yang bisa melihat selain anda.</string>
 </resources>
