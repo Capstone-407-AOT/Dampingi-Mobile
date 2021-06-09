@@ -1,12 +1,12 @@
 package com.bangkit.aot.dampingi.data
 
-import kotlinx.serialization.Serializable
+import androidx.annotation.Keep
+import com.google.gson.annotations.SerializedName
 
 
-@Serializable
-data class DataSignUp (
-        val username:String,
-        val email:String,
-        val password:String,
-        val password2:String
-        )
+class DataSignUp(
+        @field:SerializedName("username") var musername: String,
+        @field:SerializedName("email") var memail: String,
+        @field:SerializedName("password") var mpassword: String,
+        @field:SerializedName("password2") var mpassword2: String
+)
